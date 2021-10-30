@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:project1/Follower_page.dart';
+import 'package:project1/Following_page.dart';
+import 'package:project1/Messenger_page.dart';
+import 'package:project1/Posts_page.dart';
 import 'package:project1/edit_page.dart';
 import 'splash_screen.dart';
 class ProfilePage extends StatefulWidget {
@@ -230,7 +234,7 @@ class _ProfilePageState extends State<ProfilePage> {
                 Container(
                   height: MediaQuery.of(context).size.height/3.2,
                   width: MediaQuery.of(context).size.width,
-                  padding: EdgeInsets.symmetric(horizontal: 15),
+                  padding: EdgeInsets.symmetric(horizontal: 25),
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
@@ -446,14 +450,17 @@ class _ProfilePageState extends State<ProfilePage> {
                 ),
 
 
+                //Button Container
+
+
                 Container(
                   height: MediaQuery.of(context).size.height/4,
                   width:  MediaQuery.of(context).size.width,
-                  padding: EdgeInsets.only(top: 12, left: 15),
+                  padding: EdgeInsets.only(top: 25, left: 5),
 
                   child: Wrap(
                     direction: Axis.horizontal,
-                    //alignment: WrapAlignment.spaceEvenly,
+                    alignment: WrapAlignment.center,
                     spacing: 10,
                     runSpacing: 5,
                     children: [
@@ -470,7 +477,14 @@ class _ProfilePageState extends State<ProfilePage> {
                           color: Color.fromRGBO(245, 245, 245, 0.5),
                         ),
                         child: FlatButton.icon(
-                          onPressed: (){},
+                          onPressed: (){
+                            Navigator.push(
+                                context,
+                              MaterialPageRoute(
+                                  builder: (context)=> MessengerPage(),
+                              ),
+                            );
+                          },
                           icon: Icon(Icons.message_outlined,
                             size: 12,
                             color: Color.fromRGBO(22, 22, 22, 1),
@@ -498,7 +512,14 @@ class _ProfilePageState extends State<ProfilePage> {
                           color: Color.fromRGBO(245, 245, 245, 0.5),
                         ),
                         child: FlatButton.icon(
-                          onPressed: (){},
+                          onPressed: (){
+                            Navigator.push(
+                                context,
+                              MaterialPageRoute(
+                                  builder: (context)=> FollowerPage(),
+                              ),
+                            );
+                          },
                           icon: Icon(
                             Icons.follow_the_signs_rounded,
                             size: 12,
@@ -527,7 +548,14 @@ class _ProfilePageState extends State<ProfilePage> {
                           color: Color.fromRGBO(245, 245, 245, 0.5),
                         ),
                         child: FlatButton.icon(
-                          onPressed: (){},
+                          onPressed: (){
+                            Navigator.push(
+                                context,
+                              MaterialPageRoute(
+                                  builder: (context)=> FollowingPage(),
+                              ),
+                            );
+                          },
                           icon: Icon(
                             Icons.add_circle_outline,
                             size: 12,
@@ -557,7 +585,14 @@ class _ProfilePageState extends State<ProfilePage> {
                           color: Color.fromRGBO(245, 245, 245, 0.5),
                         ),
                         child: FlatButton.icon(
-                          onPressed: (){},
+                          onPressed: (){
+                            Navigator.push(
+                                context,
+                              MaterialPageRoute(
+                                  builder: (context)=> PostsPage(),
+                              ),
+                            );
+                          },
                           icon: Icon(
                             Icons.post_add_outlined,
                             size: 12,
