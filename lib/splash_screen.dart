@@ -29,7 +29,7 @@ class _SplashScreenState extends State<SplashScreen> {
                   shape: BoxShape.rectangle,
                   borderRadius: BorderRadius.circular(15),
                   image: DecorationImage(
-                    image: AssetImage("images/Splash_Screen_Image.png"),
+                    image: AssetImage("images/ICT Minsitry.png"),
                     fit: BoxFit.fill,
                   ),
                 border: Border.all(

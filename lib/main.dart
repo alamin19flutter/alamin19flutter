@@ -1,9 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:project1/Columns.dart';
-import 'package:project1/blank_home_page.dart';
-import 'package:project1/index.dart';
 import 'package:project1/splash_screen.dart';
-import 'package:project1/blank_home_page.dart';
+
 
 void main() {
   runApp(MyApp());
